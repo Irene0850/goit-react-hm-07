@@ -17,6 +17,14 @@ const ContactList = () => {
     dispatch(deleteContact(id));
   };
 
+  if (loading) {
+    return (
+      <div className={css.loaderBox}>
+        <div className={css.loader}></div>
+      </div>
+    );
+  }
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
