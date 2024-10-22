@@ -30,7 +30,7 @@ function ContactForm() {
       }}
       validationSchema={ContactFormSchema}
       onSubmit={(values, actions) => {
-        dispatch(addContact(values.name, values.number));
+        dispatch(addContact(values));
         actions.resetForm();
       }}
     >
